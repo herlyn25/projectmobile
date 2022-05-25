@@ -10,8 +10,7 @@ class Home extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 111, 118, 131),
-          title: const Text('Hola Mundo'),
-          
+          title: const Text('Hola Mundo'),          
         ),
         // ignore: prefer_const_constructors
         body: Center(
