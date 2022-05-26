@@ -1,13 +1,37 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(Counter());
+import 'button_float_custom.dart';
 
-class Counter extends StatelessWidget {
+void main() => runApp(const Counter());
+
+class Counter extends StatefulWidget {
   const Counter({Key? key}) : super(key: key);
 
   @override
+  State<Counter> createState() => _CounterState();
+}
+
+class _CounterState extends State<Counter> {
+  int count = 0;
+
+  void incrementfn() {
+    count++;
+    setState(() {});
+  }
+
+  void resetfn() {
+    count = 0;
+    setState(() {});
+  }
+
+  void decrementfn() {
+    setState(() {
+      count--;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    var count = 0;
     return Scaffold(
       appBar: AppBar(
         elevation: 8.0,
@@ -27,16 +51,8 @@ class Counter extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showMessage();
-          },
-          child: const Icon(Icons.alarm_add)),
+      floatingActionButton: ButtonFloatCustom(
+          increment: incrementfn, reset: resetfn, decrement: decrementfn),
     );
-  }
-
-  void showMessage() {
-    // ignore: avoid_print
-    print("object");
   }
 }

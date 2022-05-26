@@ -43,7 +43,6 @@ class _Counter_ScreenState extends State<Counter_Screen> {
   void showMessage() {
     setState(() {
       count = count + 1;
-    });
-    ;
+    });    
   }
 }
