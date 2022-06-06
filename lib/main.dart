@@ -8,8 +8,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return MaterialApp(
-      title: 'Material App',
-      home: ListView1()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        home: ListView1());
   }
 }

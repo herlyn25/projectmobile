@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clase1/view/listtile_custom.dart';
+
+import '../models/games.dart';
 
 class ListView1 extends StatelessWidget {
   ListView1({Key? key}) : super(key: key);
@@ -36,12 +39,8 @@ class ListView1 extends StatelessWidget {
         body: ListView.builder(
             itemCount: _games.length,
             itemBuilder: (_, index) {
-              return ListTile(
-                leading: CircleAvatar(
-                    backgroundImage:
-                        Image.network(_games[index]["image"]!).image),
-                title: Text(_games[index]["name"]!),
-              );
+              Games gm = Games(_games[index]["name"]!, _games[index]["image"]!);
+              return ListTileCustom(name: gm.name, image: gm.image);
             }));
   }
 }
