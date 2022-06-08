@@ -1,6 +1,9 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
-void main() => runApp(Counter_Screen());
+void main() => runApp(const Counter_Screen());
+
 
 class Counter_Screen extends StatefulWidget {
   const Counter_Screen({Key? key}) : super(key: key);
