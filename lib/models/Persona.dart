@@ -11,6 +11,12 @@ class Persona {
   final String celular;
   final Car car;
   final Service service;
-  Persona(
-      this.id, this.name, this.apellido, this.licencia, this.celular, this.car,this.service);
+  Persona(this.id, this.name, this.apellido, this.licencia, this.celular,
+      this.car, this.service);
+
+  @override
+  String toString() {
+    super.toString();
+    return 'Mi id es $id; mi nombre es $name $apellido con mumero celular $celular';
+  }
 }

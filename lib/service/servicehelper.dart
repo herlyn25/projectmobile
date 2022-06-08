@@ -1,7 +1,4 @@
 // ignore_for_file: avoid_function_literals_in_foreach_calls, avoid_print, unnecessary_new
-
-import 'dart:math';
-
 import 'package:firebase_database/firebase_database.dart';
 import '../models/Persona.dart';
 import '../models/car.dart';
@@ -48,27 +45,22 @@ class ServiceHelper {
   Future<bool> savePersona(Persona per) async {
     bool respuesta;
     try {
-      var key = new Random();
       await FirebaseDatabase.instance.ref().child('Registros').push().set({
-        '${key.nextInt(10000)}': {
-          {
-            'Carro': {
-              'Color': per.car.color,
-              'marca': per.car.marca,
-              'modelo': per.car.modelo,
-              'placa': per.car.placa
-            },
-            'Servicio': {
-              'lavado': per.service.washed,
-              'polish': per.service.polish,
-              'tapiceria': per.service.tapestry
-            },
-            'apellido': per.apellido,
-            'cel': per.celular,
-            'licencia': per.licencia,
-            'nombre': per.name
-          }
-        }
+        'Carro': {
+          'Color': per.car.color,
+          'marca': per.car.marca,
+          'modelo': per.car.modelo,
+          'placa': per.car.placa
+        },
+        'Servicio': {
+          'lavado': per.service.washed,
+          'polish': per.service.polish,
+          'tapiceria': per.service.tapestry
+        },
+        'apellido': per.apellido,
+        'cel': per.celular,
+        'licencia': per.licencia,
+        'nombre': per.name
       });
       respuesta = true;
     } catch (e) {

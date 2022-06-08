@@ -6,8 +6,14 @@ import 'package:flutter_clase1/service/servicehelper.dart';
 import 'package:flutter_clase1/view/accordion_custom.dart';
 import 'package:flutter_clase1/view/formPerson.dart';
 
-class FirebaseMyList extends StatelessWidget {
+class FirebaseMyList extends StatefulWidget {
   const FirebaseMyList({Key? key}) : super(key: key);
+
+  @override
+  State<FirebaseMyList> createState() => _FirebaseMyListState();
+}
+
+class _FirebaseMyListState extends State<FirebaseMyList> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +22,11 @@ class FirebaseMyList extends StatelessWidget {
             appBar: AppBar(
               title: const Text('Lista Personas'),
               actions: [
+                IconButton(
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    icon: const Icon(Icons.refresh)),
                 IconButton(
                     onPressed: () {
                       showModalBottomSheet(
