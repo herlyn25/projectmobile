@@ -15,7 +15,8 @@ class ListTileCustom extends StatelessWidget {
           context: context,
           builder: (BuildContext context) => AlertDialog(
               title: Text(name),
-              content: Image(image: Image.network(image).image))),
+              content: Image(image: Image.network(image).image))
+              ),
     );
   }
 }
