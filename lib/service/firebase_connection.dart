@@ -1,7 +1,5 @@
 // ignore_for_file: avoid_function_literals_in_foreach_calls, avoid_print, unnecessary_new, no_leading_underscores_for_local_identifiers
-
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter_clase1/models/response_firebase.dart';
 
 class FirebaseConnection {
   static final FirebaseDatabase _database = FirebaseDatabase.instance;
@@ -20,12 +18,14 @@ class FirebaseConnection {
       print(reg);
     });
   } */
-  Future<ResponseFirebase> getRegisters() async {
+  //Future<ResponseFirebase>
+  getRegisters() async {
     try {
       DatabaseReference _registros = instanceFirebase();
       DataSnapshot response = await _registros.get();
-      final register = ResponseFirebase.fromJson(response.value as List);
-      return register;
+      //final register = ResponseFirebase.fromJson(response.value as List);
+      //return register;
+      print(response.value);
     } catch (e) {
       rethrow;
     }
