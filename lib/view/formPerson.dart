@@ -7,7 +7,7 @@ import 'package:flutter_clase1/models/car.dart';
 
 import '../models/Persona.dart';
 import '../models/service.dart';
-import '../service/servicehelper.dart';
+import '../service/firebase_connection.dart';
 
 class FormPerson extends StatefulWidget {
   const FormPerson({Key? key}) : super(key: key);

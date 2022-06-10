@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_clase1/models/Persona.dart';
-import 'package:flutter_clase1/service/servicehelper.dart';
+import 'package:flutter_clase1/service/firebase_connection.dart';
 import 'package:flutter_clase1/view/accordion_custom.dart';
 import 'package:flutter_clase1/view/formPerson.dart';
 
