@@ -25,7 +25,7 @@ class AccordionCustom extends StatelessWidget {
         ),
         collapsedIcon: const Icon(Icons.add),
         expandedIcon: const Icon(Icons.minimize),
-        contentBackgroundColor: Color.fromARGB(255, 38, 149, 240),
+        contentBackgroundColor: const Color.fromARGB(255, 38, 149, 240),
         textStyle: const TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: "Pacifico",

@@ -40,6 +40,10 @@ dependencies:
   material_color_utilities: ^0.1.4
   getwidget: ^3.0.1
   flutter_svg: ^0.20.0-nullsafety.3
+  built_value: ^8.3.2
+  json_serializable: ^6.2.0
+  built_value_generator: ^8.3.2
+  build_runner: ^2.1.11
 
 
 dev_dependencies:

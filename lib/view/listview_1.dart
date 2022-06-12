@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clase1/service/firebase_connection.dart';
 import 'package:flutter_clase1/view/listtile_custom.dart';
 
 import '../models/games.dart';
@@ -35,8 +34,8 @@ class ListView1 extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    FirebaseConnection fc = FirebaseConnection();
-    fc.getRegisters();
+    
+    
     return Scaffold(
         appBar: AppBar(title: const Text("Video Juegos")),
         body: ListView.builder(

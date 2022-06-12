@@ -1,17 +1,22 @@
-class Car {
-  final String? color;
-  final String? marca;
-  final int? modelo;
-  final String? placa;
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+import 'package:flutter_clase1/models/serializers.dart';
+
+part 'car.g.dart';
+
+abstract class Car implements Built<Car, CarBuilder> {
   
-  Car({this.color,this.marca, this.modelo, this.placa});
-  
-  factory Car.fromJson(Map<String, dynamic> json) {
-    return Car(
-      color: json['Color'],
-      marca: json['marca'],
-      modelo: json['modelo'],
-      placa : json['placa']      
-    );
+  String get color;
+  String get marca;
+  int get modelo;
+  String get placa;
+
+  Car._();
+
+  factory Car([void Function(CarBuilder) updates]) = _$Car;
+  static Serializer<Car> get serializer => _$carSerializer;
+
+  static Car? fromJson(Map<String, dynamic> json) {
+    return serializers.deserializeWith(Car.serializer, json);
   }
 }
