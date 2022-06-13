@@ -1,21 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'car.dart';
+part of 'carro.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-Serializer<Car> _$carSerializer = new _$CarSerializer();
+Serializer<Carro> _$carroSerializer = new _$CarroSerializer();
 
-class _$CarSerializer implements StructuredSerializer<Car> {
+class _$CarroSerializer implements StructuredSerializer<Carro> {
   @override
-  final Iterable<Type> types = const [Car, _$Car];
+  final Iterable<Type> types = const [Carro, _$Carro];
   @override
-  final String wireName = 'Car';
+  final String wireName = 'Carro';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, Car object,
+  Iterable<Object?> serialize(Serializers serializers, Carro object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       'color',
@@ -35,9 +35,9 @@ class _$CarSerializer implements StructuredSerializer<Car> {
   }
 
   @override
-  Car deserialize(Serializers serializers, Iterable<Object?> serialized,
+  Carro deserialize(Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new CarBuilder();
+    final result = new CarroBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -68,7 +68,7 @@ class _$CarSerializer implements StructuredSerializer<Car> {
   }
 }
 
-class _$Car extends Car {
+class _$Carro extends Carro {
   @override
   final String color;
   @override
@@ -78,32 +78,32 @@ class _$Car extends Car {
   @override
   final String placa;
 
-  factory _$Car([void Function(CarBuilder)? updates]) =>
-      (new CarBuilder()..update(updates))._build();
+  factory _$Carro([void Function(CarroBuilder)? updates]) =>
+      (new CarroBuilder()..update(updates))._build();
 
-  _$Car._(
+  _$Carro._(
       {required this.color,
       required this.marca,
       required this.modelo,
       required this.placa})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(color, r'Car', 'color');
-    BuiltValueNullFieldError.checkNotNull(marca, r'Car', 'marca');
-    BuiltValueNullFieldError.checkNotNull(modelo, r'Car', 'modelo');
-    BuiltValueNullFieldError.checkNotNull(placa, r'Car', 'placa');
+    BuiltValueNullFieldError.checkNotNull(color, r'Carro', 'color');
+    BuiltValueNullFieldError.checkNotNull(marca, r'Carro', 'marca');
+    BuiltValueNullFieldError.checkNotNull(modelo, r'Carro', 'modelo');
+    BuiltValueNullFieldError.checkNotNull(placa, r'Carro', 'placa');
   }
 
   @override
-  Car rebuild(void Function(CarBuilder) updates) =>
+  Carro rebuild(void Function(CarroBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  CarBuilder toBuilder() => new CarBuilder()..replace(this);
+  CarroBuilder toBuilder() => new CarroBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Car &&
+    return other is Carro &&
         color == other.color &&
         marca == other.marca &&
         modelo == other.modelo &&
@@ -119,7 +119,7 @@ class _$Car extends Car {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'Car')
+    return (newBuiltValueToStringHelper(r'Carro')
           ..add('color', color)
           ..add('marca', marca)
           ..add('modelo', modelo)
@@ -128,8 +128,8 @@ class _$Car extends Car {
   }
 }
 
-class CarBuilder implements Builder<Car, CarBuilder> {
-  _$Car? _$v;
+class CarroBuilder implements Builder<Carro, CarroBuilder> {
+  _$Carro? _$v;
 
   String? _color;
   String? get color => _$this._color;
@@ -147,9 +147,9 @@ class CarBuilder implements Builder<Car, CarBuilder> {
   String? get placa => _$this._placa;
   set placa(String? placa) => _$this._placa = placa;
 
-  CarBuilder();
+  CarroBuilder();
 
-  CarBuilder get _$this {
+  CarroBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _color = $v.color;
@@ -162,30 +162,30 @@ class CarBuilder implements Builder<Car, CarBuilder> {
   }
 
   @override
-  void replace(Car other) {
+  void replace(Carro other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$Car;
+    _$v = other as _$Carro;
   }
 
   @override
-  void update(void Function(CarBuilder)? updates) {
+  void update(void Function(CarroBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  Car build() => _build();
+  Carro build() => _build();
 
-  _$Car _build() {
+  _$Carro _build() {
     final _$result = _$v ??
-        new _$Car._(
+        new _$Carro._(
             color:
-                BuiltValueNullFieldError.checkNotNull(color, r'Car', 'color'),
+                BuiltValueNullFieldError.checkNotNull(color, r'Carro', 'color'),
             marca:
-                BuiltValueNullFieldError.checkNotNull(marca, r'Car', 'marca'),
-            modelo:
-                BuiltValueNullFieldError.checkNotNull(modelo, r'Car', 'modelo'),
-            placa:
-                BuiltValueNullFieldError.checkNotNull(placa, r'Car', 'placa'));
+                BuiltValueNullFieldError.checkNotNull(marca, r'Carro', 'marca'),
+            modelo: BuiltValueNullFieldError.checkNotNull(
+                modelo, r'Carro', 'modelo'),
+            placa: BuiltValueNullFieldError.checkNotNull(
+                placa, r'Carro', 'placa'));
     replace(_$result);
     return _$result;
   }

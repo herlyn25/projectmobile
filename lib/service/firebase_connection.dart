@@ -16,7 +16,7 @@ class FirebaseConnection {
     try {
       DatabaseReference _registros = instanceFirebase();
       DataSnapshot response = await _registros.get();
-
+      print(response.value);
       response.children.forEach((element) {
         Persona2? obj =
             serializers.deserializeWith(Persona2.serializer, element.value);

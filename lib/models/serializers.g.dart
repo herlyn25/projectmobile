@@ -7,7 +7,7 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
-      ..add(Car.serializer)
+      ..add(Carro.serializer)
       ..add(Persona2.serializer))
     .build();
 
