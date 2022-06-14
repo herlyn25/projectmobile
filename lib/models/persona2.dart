@@ -13,6 +13,7 @@ abstract class Persona2 implements Built<Persona2, Persona2Builder> {
   String get licencia;
   int get cel;
   String get sexo;
+  Carro get carro;
 
   Persona2._();
   factory Persona2([void Function(Persona2Builder) updates]) = _$Persona2;

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clase1/models/persona2.dart';
 import 'package:flutter_clase1/view/listtile_custom.dart';
 
 import '../models/games.dart';
 
 class ListView1 extends StatelessWidget {
-  ListView1({Key? key}) : super(key: key);
+  Persona2 persona2;
+  ListView1({Key? key,required this.persona2}) : super(key: key);
   final List<Map<String, String>> _games = [
     {
       "image":
@@ -34,15 +36,17 @@ class ListView1 extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    
-    
     return Scaffold(
         appBar: AppBar(title: const Text("Video Juegos")),
         body: ListView.builder(
             itemCount: _games.length,
             itemBuilder: (_, index) {
               Games gm = Games(_games[index]["name"]!, _games[index]["image"]!);
-              return ListTileCustom(name: gm.name, image: gm.image);
+              return ListTileCustom(
+                name: gm.name,
+                image: gm.image,
+                persona: persona2,
+              );
             }));
   }
 }

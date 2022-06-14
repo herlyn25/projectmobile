@@ -31,6 +31,8 @@ class _$Persona2Serializer implements StructuredSerializer<Persona2> {
       serializers.serialize(object.cel, specifiedType: const FullType(int)),
       'sexo',
       serializers.serialize(object.sexo, specifiedType: const FullType(String)),
+      'carro',
+      serializers.serialize(object.carro, specifiedType: const FullType(Carro)),
     ];
 
     return result;
@@ -67,6 +69,10 @@ class _$Persona2Serializer implements StructuredSerializer<Persona2> {
           result.sexo = serializers.deserialize(value,
               specifiedType: const FullType(String))! as String;
           break;
+        case 'carro':
+          result.carro.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Carro))! as Carro);
+          break;
       }
     }
 
@@ -85,6 +91,8 @@ class _$Persona2 extends Persona2 {
   final int cel;
   @override
   final String sexo;
+  @override
+  final Carro carro;
 
   factory _$Persona2([void Function(Persona2Builder)? updates]) =>
       (new Persona2Builder()..update(updates))._build();
@@ -94,13 +102,15 @@ class _$Persona2 extends Persona2 {
       required this.apellido,
       required this.licencia,
       required this.cel,
-      required this.sexo})
+      required this.sexo,
+      required this.carro})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(nombre, r'Persona2', 'nombre');
     BuiltValueNullFieldError.checkNotNull(apellido, r'Persona2', 'apellido');
     BuiltValueNullFieldError.checkNotNull(licencia, r'Persona2', 'licencia');
     BuiltValueNullFieldError.checkNotNull(cel, r'Persona2', 'cel');
     BuiltValueNullFieldError.checkNotNull(sexo, r'Persona2', 'sexo');
+    BuiltValueNullFieldError.checkNotNull(carro, r'Persona2', 'carro');
   }
 
   @override
@@ -118,17 +128,20 @@ class _$Persona2 extends Persona2 {
         apellido == other.apellido &&
         licencia == other.licencia &&
         cel == other.cel &&
-        sexo == other.sexo;
+        sexo == other.sexo &&
+        carro == other.carro;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, nombre.hashCode), apellido.hashCode),
-                licencia.hashCode),
-            cel.hashCode),
-        sexo.hashCode));
+            $jc(
+                $jc($jc($jc(0, nombre.hashCode), apellido.hashCode),
+                    licencia.hashCode),
+                cel.hashCode),
+            sexo.hashCode),
+        carro.hashCode));
   }
 
   @override
@@ -138,7 +151,8 @@ class _$Persona2 extends Persona2 {
           ..add('apellido', apellido)
           ..add('licencia', licencia)
           ..add('cel', cel)
-          ..add('sexo', sexo))
+          ..add('sexo', sexo)
+          ..add('carro', carro))
         .toString();
   }
 }
@@ -166,6 +180,10 @@ class Persona2Builder implements Builder<Persona2, Persona2Builder> {
   String? get sexo => _$this._sexo;
   set sexo(String? sexo) => _$this._sexo = sexo;
 
+  CarroBuilder? _carro;
+  CarroBuilder get carro => _$this._carro ??= new CarroBuilder();
+  set carro(CarroBuilder? carro) => _$this._carro = carro;
+
   Persona2Builder();
 
   Persona2Builder get _$this {
@@ -176,6 +194,7 @@ class Persona2Builder implements Builder<Persona2, Persona2Builder> {
       _licencia = $v.licencia;
       _cel = $v.cel;
       _sexo = $v.sexo;
+      _carro = $v.carro.toBuilder();
       _$v = null;
     }
     return this;
@@ -196,17 +215,32 @@ class Persona2Builder implements Builder<Persona2, Persona2Builder> {
   Persona2 build() => _build();
 
   _$Persona2 _build() {
-    final _$result = _$v ??
-        new _$Persona2._(
-            nombre: BuiltValueNullFieldError.checkNotNull(
-                nombre, r'Persona2', 'nombre'),
-            apellido: BuiltValueNullFieldError.checkNotNull(
-                apellido, r'Persona2', 'apellido'),
-            licencia: BuiltValueNullFieldError.checkNotNull(
-                licencia, r'Persona2', 'licencia'),
-            cel: BuiltValueNullFieldError.checkNotNull(cel, r'Persona2', 'cel'),
-            sexo: BuiltValueNullFieldError.checkNotNull(
-                sexo, r'Persona2', 'sexo'));
+    _$Persona2 _$result;
+    try {
+      _$result = _$v ??
+          new _$Persona2._(
+              nombre: BuiltValueNullFieldError.checkNotNull(
+                  nombre, r'Persona2', 'nombre'),
+              apellido: BuiltValueNullFieldError.checkNotNull(
+                  apellido, r'Persona2', 'apellido'),
+              licencia: BuiltValueNullFieldError.checkNotNull(
+                  licencia, r'Persona2', 'licencia'),
+              cel: BuiltValueNullFieldError.checkNotNull(
+                  cel, r'Persona2', 'cel'),
+              sexo: BuiltValueNullFieldError.checkNotNull(
+                  sexo, r'Persona2', 'sexo'),
+              carro: carro.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'carro';
+        carro.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'Persona2', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

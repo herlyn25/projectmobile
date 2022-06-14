@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_function_literals_in_foreach_calls, avoid_print, unnecessary_new, no_leading_underscores_for_local_identifiers
 
+import 'dart:convert';
+
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_clase1/models/persona2.dart';
 import 'package:flutter_clase1/models/serializers.dart';
@@ -16,11 +18,13 @@ class FirebaseConnection {
     try {
       DatabaseReference _registros = instanceFirebase();
       DataSnapshot response = await _registros.get();
-      print(response.value);
-      response.children.forEach((element) {
-        Persona2? obj =
-            serializers.deserializeWith(Persona2.serializer, element.value);
+      String myJson = json.encode(response.value);
+      Map<String, dynamic> myJsonDecode = json.decode(myJson);
+      print(myJsonDecode);
+      myJsonDecode.forEach((key, element) {
+        Persona2? obj = Persona2.fromJson(element);
         persons.add(obj!);
+        print(obj);
       });
     } catch (e) {
       //rethrow;

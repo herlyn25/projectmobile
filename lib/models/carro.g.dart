@@ -29,6 +29,15 @@ class _$CarroSerializer implements StructuredSerializer<Carro> {
       'placa',
       serializers.serialize(object.placa,
           specifiedType: const FullType(String)),
+      'lavado',
+      serializers.serialize(object.lavado,
+          specifiedType: const FullType(String)),
+      'polish',
+      serializers.serialize(object.polish,
+          specifiedType: const FullType(String)),
+      'tapiceria',
+      serializers.serialize(object.tapiceria,
+          specifiedType: const FullType(String)),
     ];
 
     return result;
@@ -61,6 +70,18 @@ class _$CarroSerializer implements StructuredSerializer<Carro> {
           result.placa = serializers.deserialize(value,
               specifiedType: const FullType(String))! as String;
           break;
+        case 'lavado':
+          result.lavado = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'polish':
+          result.polish = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'tapiceria':
+          result.tapiceria = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
       }
     }
 
@@ -77,6 +98,12 @@ class _$Carro extends Carro {
   final int modelo;
   @override
   final String placa;
+  @override
+  final String lavado;
+  @override
+  final String polish;
+  @override
+  final String tapiceria;
 
   factory _$Carro([void Function(CarroBuilder)? updates]) =>
       (new CarroBuilder()..update(updates))._build();
@@ -85,12 +112,18 @@ class _$Carro extends Carro {
       {required this.color,
       required this.marca,
       required this.modelo,
-      required this.placa})
+      required this.placa,
+      required this.lavado,
+      required this.polish,
+      required this.tapiceria})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(color, r'Carro', 'color');
     BuiltValueNullFieldError.checkNotNull(marca, r'Carro', 'marca');
     BuiltValueNullFieldError.checkNotNull(modelo, r'Carro', 'modelo');
     BuiltValueNullFieldError.checkNotNull(placa, r'Carro', 'placa');
+    BuiltValueNullFieldError.checkNotNull(lavado, r'Carro', 'lavado');
+    BuiltValueNullFieldError.checkNotNull(polish, r'Carro', 'polish');
+    BuiltValueNullFieldError.checkNotNull(tapiceria, r'Carro', 'tapiceria');
   }
 
   @override
@@ -107,14 +140,24 @@ class _$Carro extends Carro {
         color == other.color &&
         marca == other.marca &&
         modelo == other.modelo &&
-        placa == other.placa;
+        placa == other.placa &&
+        lavado == other.lavado &&
+        polish == other.polish &&
+        tapiceria == other.tapiceria;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, color.hashCode), marca.hashCode), modelo.hashCode),
-        placa.hashCode));
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, color.hashCode), marca.hashCode),
+                        modelo.hashCode),
+                    placa.hashCode),
+                lavado.hashCode),
+            polish.hashCode),
+        tapiceria.hashCode));
   }
 
   @override
@@ -123,7 +166,10 @@ class _$Carro extends Carro {
           ..add('color', color)
           ..add('marca', marca)
           ..add('modelo', modelo)
-          ..add('placa', placa))
+          ..add('placa', placa)
+          ..add('lavado', lavado)
+          ..add('polish', polish)
+          ..add('tapiceria', tapiceria))
         .toString();
   }
 }
@@ -147,6 +193,18 @@ class CarroBuilder implements Builder<Carro, CarroBuilder> {
   String? get placa => _$this._placa;
   set placa(String? placa) => _$this._placa = placa;
 
+  String? _lavado;
+  String? get lavado => _$this._lavado;
+  set lavado(String? lavado) => _$this._lavado = lavado;
+
+  String? _polish;
+  String? get polish => _$this._polish;
+  set polish(String? polish) => _$this._polish = polish;
+
+  String? _tapiceria;
+  String? get tapiceria => _$this._tapiceria;
+  set tapiceria(String? tapiceria) => _$this._tapiceria = tapiceria;
+
   CarroBuilder();
 
   CarroBuilder get _$this {
@@ -156,6 +214,9 @@ class CarroBuilder implements Builder<Carro, CarroBuilder> {
       _marca = $v.marca;
       _modelo = $v.modelo;
       _placa = $v.placa;
+      _lavado = $v.lavado;
+      _polish = $v.polish;
+      _tapiceria = $v.tapiceria;
       _$v = null;
     }
     return this;
@@ -184,8 +245,14 @@ class CarroBuilder implements Builder<Carro, CarroBuilder> {
                 BuiltValueNullFieldError.checkNotNull(marca, r'Carro', 'marca'),
             modelo: BuiltValueNullFieldError.checkNotNull(
                 modelo, r'Carro', 'modelo'),
-            placa: BuiltValueNullFieldError.checkNotNull(
-                placa, r'Carro', 'placa'));
+            placa:
+                BuiltValueNullFieldError.checkNotNull(placa, r'Carro', 'placa'),
+            lavado: BuiltValueNullFieldError.checkNotNull(
+                lavado, r'Carro', 'lavado'),
+            polish: BuiltValueNullFieldError.checkNotNull(
+                polish, r'Carro', 'polish'),
+            tapiceria: BuiltValueNullFieldError.checkNotNull(
+                tapiceria, r'Carro', 'tapiceria'));
     replace(_$result);
     return _$result;
   }

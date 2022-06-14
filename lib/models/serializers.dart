@@ -9,6 +9,6 @@ import 'package:flutter_clase1/models/persona2.dart';
 
 part 'serializers.g.dart';
 
-@SerializersFor([Persona2, Carro])
+@SerializersFor([Persona2])
 final Serializers serializers =
     (_$serializers.toBuilder()..addPlugin(StandardJsonPlugin())).build();

@@ -5,10 +5,14 @@ import 'package:flutter_clase1/models/serializers.dart';
 part 'carro.g.dart';
 
 abstract class Carro implements Built<Carro, CarroBuilder> {
+  
   String get color;
   String get marca;
   int get modelo;
   String get placa;
+  String get lavado;
+  String get polish;
+  String get tapiceria;
 
   Carro._();
 
