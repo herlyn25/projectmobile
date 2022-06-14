@@ -20,11 +20,9 @@ class FirebaseConnection {
       DataSnapshot response = await _registros.get();
       String myJson = json.encode(response.value);
       Map<String, dynamic> myJsonDecode = json.decode(myJson);
-      print(myJsonDecode);
       myJsonDecode.forEach((key, element) {
         Persona2? obj = Persona2.fromJson(element);
         persons.add(obj!);
-        print(obj);
       });
     } catch (e) {
       //rethrow;
