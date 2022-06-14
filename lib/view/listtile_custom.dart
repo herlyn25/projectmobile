@@ -8,7 +8,7 @@ class ListTileCustom extends StatelessWidget {
   final String image;
   final Persona2 persona;
 
-  ListTileCustom(
+  const ListTileCustom(
       {super.key,
       required this.name,
       required this.image,

@@ -17,7 +17,7 @@ class _FirebaseMyListState extends State<FirebaseMyList> {
     return MaterialApp(
         title: 'Consumiendo de Firebase',
         home: Scaffold(
-            backgroundColor: Color.fromARGB(255, 82, 81, 81),
+            backgroundColor: const Color.fromARGB(255, 82, 81, 81),
             appBar: AppBar(
               title: const Text(
                 'Lista Personas',

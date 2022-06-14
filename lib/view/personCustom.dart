@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_typing_uninitialized_variables, non_constant_identifier_names, avoid_unnecessary_containers, must_be_immutable, file_names
+// ignore_for_file: prefer_typing_uninitialized_variables, non_constant_identifier_names, avoid_unnecessary_containers, must_be_immutable, file_names, unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:flutter_clase1/models/persona2.dart';
@@ -21,7 +21,9 @@ class PersonCustom extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('${persona.nombre} ${persona.apellido}', style: style),
+          title: Text('${persona.nombre} ${persona.apellido}',
+              style: const TextStyle(
+                  fontFamily: "Pacifico", fontSize: 36, color: Colors.white)),
         ),
         body: Stack(children: [
           Column(children: [
@@ -31,19 +33,16 @@ class PersonCustom extends StatelessWidget {
                 persona.sexo == 'Masculino'
                     ? "https://cdn-icons-png.flaticon.com/512/7088/7088399.png"
                     : "https://cdn-icons-png.flaticon.com/512/7088/7088452.png"),
-            Text('''Carro
+            Text('''Carro:
         Color: ${persona.carro.color}
         Marca: ${persona.carro.marca}
         Modelo: ${persona.carro.modelo}
         Placa: ${persona.carro.placa}
         ''', style: style2),
-            Text(
-              '''Servicio
+            Text('''Servicio:
         Lavado: ${persona.carro.polish}
         Polish: ${persona.carro.polish}
-        Tapiceria: ${persona.carro.tapiceria}\n''',
-              style: style2,
-            ),
+        Tapiceria: ${persona.carro.tapiceria}\n''', style: style2),
             const ElevationCustom(
                 widget: FirebaseMyList(),
                 text_button: "Ir al Listado",

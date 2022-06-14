@@ -4,7 +4,6 @@ import 'dart:convert';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_clase1/models/persona2.dart';
-import 'package:flutter_clase1/models/serializers.dart';
 
 class FirebaseConnection {
   static final FirebaseDatabase _database = FirebaseDatabase.instance;

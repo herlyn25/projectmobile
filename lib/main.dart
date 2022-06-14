@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clase1/firebase_options.dart';
-import 'package:flutter_clase1/view/firebase_my_list.dart';
 import 'package:flutter_clase1/view/lottie_custom.dart';
 
 Future<void> main() async {
@@ -18,6 +17,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        home: LottieCustom());
+        home: const LottieCustom());
   }
 }
