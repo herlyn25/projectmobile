@@ -30,9 +30,7 @@ class PersonCustom extends StatelessWidget {
             Gradiente(
                 '''Sexo: ${persona.sexo}\n Licencia: ${persona.licencia}\n Celular: ${persona.cel}''',
                 270,
-                persona.sexo == 'Masculino'
-                    ? "https://cdn-icons-png.flaticon.com/512/7088/7088399.png"
-                    : "https://cdn-icons-png.flaticon.com/512/7088/7088452.png"),
+                persona.photo),
             Text('''Carro:
         Color: ${persona.carro.color}
         Marca: ${persona.carro.marca}

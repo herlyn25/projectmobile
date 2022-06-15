@@ -21,7 +21,7 @@ class FirebaseConnection {
       Map<String, dynamic> myJsonDecode = json.decode(myJson);
       myJsonDecode.forEach((key, element) {
         Persona2? obj = Persona2.fromJson(element);
-        persons.add(obj!);
+        persons.add(obj!);        
       });
     } catch (e) {
       //rethrow;

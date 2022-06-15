@@ -27,6 +27,9 @@ class _$Persona2Serializer implements StructuredSerializer<Persona2> {
       'licencia',
       serializers.serialize(object.licencia,
           specifiedType: const FullType(String)),
+      'photo',
+      serializers.serialize(object.photo,
+          specifiedType: const FullType(String)),
       'cel',
       serializers.serialize(object.cel, specifiedType: const FullType(int)),
       'sexo',
@@ -61,6 +64,10 @@ class _$Persona2Serializer implements StructuredSerializer<Persona2> {
           result.licencia = serializers.deserialize(value,
               specifiedType: const FullType(String))! as String;
           break;
+        case 'photo':
+          result.photo = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
         case 'cel':
           result.cel = serializers.deserialize(value,
               specifiedType: const FullType(int))! as int;
@@ -88,6 +95,8 @@ class _$Persona2 extends Persona2 {
   @override
   final String licencia;
   @override
+  final String photo;
+  @override
   final int cel;
   @override
   final String sexo;
@@ -101,6 +110,7 @@ class _$Persona2 extends Persona2 {
       {required this.nombre,
       required this.apellido,
       required this.licencia,
+      required this.photo,
       required this.cel,
       required this.sexo,
       required this.carro})
@@ -108,6 +118,7 @@ class _$Persona2 extends Persona2 {
     BuiltValueNullFieldError.checkNotNull(nombre, r'Persona2', 'nombre');
     BuiltValueNullFieldError.checkNotNull(apellido, r'Persona2', 'apellido');
     BuiltValueNullFieldError.checkNotNull(licencia, r'Persona2', 'licencia');
+    BuiltValueNullFieldError.checkNotNull(photo, r'Persona2', 'photo');
     BuiltValueNullFieldError.checkNotNull(cel, r'Persona2', 'cel');
     BuiltValueNullFieldError.checkNotNull(sexo, r'Persona2', 'sexo');
     BuiltValueNullFieldError.checkNotNull(carro, r'Persona2', 'carro');
@@ -127,6 +138,7 @@ class _$Persona2 extends Persona2 {
         nombre == other.nombre &&
         apellido == other.apellido &&
         licencia == other.licencia &&
+        photo == other.photo &&
         cel == other.cel &&
         sexo == other.sexo &&
         carro == other.carro;
@@ -137,8 +149,10 @@ class _$Persona2 extends Persona2 {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc($jc(0, nombre.hashCode), apellido.hashCode),
-                    licencia.hashCode),
+                $jc(
+                    $jc($jc($jc(0, nombre.hashCode), apellido.hashCode),
+                        licencia.hashCode),
+                    photo.hashCode),
                 cel.hashCode),
             sexo.hashCode),
         carro.hashCode));
@@ -150,6 +164,7 @@ class _$Persona2 extends Persona2 {
           ..add('nombre', nombre)
           ..add('apellido', apellido)
           ..add('licencia', licencia)
+          ..add('photo', photo)
           ..add('cel', cel)
           ..add('sexo', sexo)
           ..add('carro', carro))
@@ -172,6 +187,10 @@ class Persona2Builder implements Builder<Persona2, Persona2Builder> {
   String? get licencia => _$this._licencia;
   set licencia(String? licencia) => _$this._licencia = licencia;
 
+  String? _photo;
+  String? get photo => _$this._photo;
+  set photo(String? photo) => _$this._photo = photo;
+
   int? _cel;
   int? get cel => _$this._cel;
   set cel(int? cel) => _$this._cel = cel;
@@ -192,6 +211,7 @@ class Persona2Builder implements Builder<Persona2, Persona2Builder> {
       _nombre = $v.nombre;
       _apellido = $v.apellido;
       _licencia = $v.licencia;
+      _photo = $v.photo;
       _cel = $v.cel;
       _sexo = $v.sexo;
       _carro = $v.carro.toBuilder();
@@ -225,6 +245,8 @@ class Persona2Builder implements Builder<Persona2, Persona2Builder> {
                   apellido, r'Persona2', 'apellido'),
               licencia: BuiltValueNullFieldError.checkNotNull(
                   licencia, r'Persona2', 'licencia'),
+              photo: BuiltValueNullFieldError.checkNotNull(
+                  photo, r'Persona2', 'photo'),
               cel: BuiltValueNullFieldError.checkNotNull(
                   cel, r'Persona2', 'cel'),
               sexo: BuiltValueNullFieldError.checkNotNull(

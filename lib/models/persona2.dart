@@ -11,6 +11,7 @@ abstract class Persona2 implements Built<Persona2, Persona2Builder> {
   String get nombre;
   String get apellido;
   String get licencia;
+  String get photo;
   int get cel;
   String get sexo;
   Carro get carro;
