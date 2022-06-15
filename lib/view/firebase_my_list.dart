@@ -10,7 +10,7 @@ class FirebaseMyList extends StatefulWidget {
   const FirebaseMyList({Key? key}) : super(key: key);
 
   @override
-  State<FirebaseMyList> createState() => _FirebaseMyListState();
+  State<FirebaseMyList> get createState => _FirebaseMyListState();
 }
 
 class _FirebaseMyListState extends State<FirebaseMyList> {

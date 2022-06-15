@@ -14,14 +14,14 @@ class ServiceHelper {
         snap.snapshot.children.forEach((element) {
           Map map = {'key': element.key, 'body': element.value};
           Car car = Car(
-              map['body']['Carro']['Color'],
-              map['body']['Carro']['marca'],
-              map['body']['Carro']['modelo'],
-              map['body']['Carro']['placa']);
+              map['body']['carro']['color'],
+              map['body']['carro']['marca'],
+              map['body']['carro']['modelo'],
+              map['body']['carro']['placa']);
           Service service = Service(
-            map['body']['Servicio']['lavado'],
-            map['body']['Servicio']['polish'],
-            map['body']['Servicio']['tapiceria'],
+            map['body']['servicio']['lavado'],
+            map['body']['servicio']['polish'],
+            map['body']['servicio']['tapiceria'],
           );
           Persona persona = Persona(
               map['key'].toString(),

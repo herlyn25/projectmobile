@@ -1,7 +1,5 @@
 // ignore_for_file: file_names, no_leading_underscores_for_local_identifiers, unused_local_variable, unnecessary_new, use_build_context_synchronously
 
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_clase1/models/car.dart';
 
@@ -13,7 +11,7 @@ class FormPerson extends StatefulWidget {
   const FormPerson({Key? key}) : super(key: key);
 
   @override
-  State<FormPerson> createState() => _FormPersonState();
+  State<FormPerson> get createState => _FormPersonState();
 }
 
 class _FormPersonState extends State<FormPerson> {
@@ -145,8 +143,9 @@ class _FormPersonState extends State<FormPerson> {
                       labelText: "Digite Marca",
                       prefixIcon: Icon(Icons.mark_as_unread)),
                   validator: (String? value) {
-                    if (value == null || value.isEmpty)
+                    if (value == null || value.isEmpty) {
                       return "marca requerido";
+                    }
                   },
                 ),
                 TextFormField(
