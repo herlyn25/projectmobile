@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clase1/models/persona2.dart';
 import 'package:flutter_clase1/view/listtile_custom.dart';
 
-import '../models/games.dart';
+import '../../models/games.dart';
 
 class ListView1 extends StatelessWidget {
   Persona2 persona2;
-  ListView1({Key? key,required this.persona2}) : super(key: key);
+  ListView1({Key? key, required this.persona2}) : super(key: key);
   final List<Map<String, String>> _games = [
     {
       "image":

@@ -2,9 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_clase1/models/persona2.dart';
-import 'package:flutter_clase1/view/widgets/elevationCustom.dart';
+import 'package:flutter_clase1/view/widgets/elevation_custom.dart';
 import 'package:flutter_clase1/view/widgets/gradiente.dart';
-
 import 'firebase_my_list.dart';
 
 class PersonCustom extends StatelessWidget {
@@ -18,12 +17,12 @@ class PersonCustom extends StatelessWidget {
     const style2 =
         TextStyle(fontFamily: "Pacifico", fontSize: 17, color: Colors.blue);
     return MaterialApp(
-      title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.grey,
           title: Text('${persona.nombre} ${persona.apellido}',
               style: const TextStyle(
-                  fontFamily: "Pacifico", fontSize: 36, color: Colors.white)),
+                  fontFamily: "Pacifico", fontSize: 31, color: Colors.white)),
         ),
         body: Stack(children: [
           Column(children: [
@@ -43,7 +42,7 @@ class PersonCustom extends StatelessWidget {
         Tapiceria: ${persona.carro.tapiceria}\n''', style: style2),
             const ElevationCustom(
                 widget: FirebaseMyList(),
-                text_button: "Ir al Listado",
+                text_button: "Regresar",
                 size_letter: 28)
           ])
         ]),

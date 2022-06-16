@@ -66,7 +66,7 @@ flutter:
   fonts:
     - family: Pacifico
       fonts:
-        - asset: fonts/Pacifico-Regular.ttf
+        - asset: assets/fonts/Pacifico-Regular.ttf
 
 
   # The following line ensures that the Material Icons font is
