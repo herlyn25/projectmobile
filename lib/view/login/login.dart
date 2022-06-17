@@ -19,10 +19,25 @@ class Login extends StatelessWidget {
                   LoginGoogleUtils().signInWithGoogle().then((user) => {
                         if (user != null)
                           {
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (context) {
-                              return const Menu();
-                            }))
+                            showDialog<Image>(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                title: Text("Bienvenido ${user.displayName}"),
+                                content: Image(
+                                    image: Image.network('${user.photoURL()}')
+                                        .image),
+                                actions: [
+                                  ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: const Text("Aceptar"))
+                                ],
+                              ),
+                            ).whenComplete(() => Navigator.of(context)
+                                    .push(MaterialPageRoute(builder: (context) {
+                                  return const Menu();
+                                })))
                           }
                       });
                 },
