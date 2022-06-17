@@ -16,37 +16,37 @@ class PersonCustom extends StatelessWidget {
         TextStyle(fontFamily: "Pacifico", fontSize: 17, color: Colors.white);
     const style2 =
         TextStyle(fontFamily: "Pacifico", fontSize: 17, color: Colors.blue);
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
-          title: Text('${persona.nombre} ${persona.apellido}',
-              style: const TextStyle(
-                  fontFamily: "Pacifico", fontSize: 31, color: Colors.white)),
-        ),
-        body: Stack(children: [
-          Column(children: [
-            Gradiente(
-                '''Sexo: ${persona.sexo}\n Licencia: ${persona.licencia}\n Celular: ${persona.cel}''',
-                270,
-                persona.photo),
-            Text('''Carro:
-        Color: ${persona.carro.color}
-        Marca: ${persona.carro.marca}
-        Modelo: ${persona.carro.modelo}
-        Placa: ${persona.carro.placa}
-        ''', style: style2),
-            Text('''Servicio:
-        Lavado: ${persona.carro.polish}
-        Polish: ${persona.carro.polish}
-        Tapiceria: ${persona.carro.tapiceria}\n''', style: style2),
-            const ElevationCustom(
-                widget: FirebaseMyList(),
-                text_button: "Regresar",
-                size_letter: 28)
-          ])
-        ]),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 82, 81, 81),
+        title: Text('${persona.nombre} ${persona.apellido}',
+            style: const TextStyle(
+                fontFamily: "Pacifico", fontSize: 30, color: Colors.white)),
       ),
+      body: Stack(children: [
+        Column(children: [
+          Gradiente(
+              '''Sexo: ${persona.sexo}\n Licencia: ${persona.licencia}\n Celular: ${persona.cel}''',
+              270,
+              persona.photo,
+              10),
+          Text('''Carro:
+      Color: ${persona.carro.color}
+      Marca: ${persona.carro.marca}
+      Modelo: ${persona.carro.modelo}
+      Placa: ${persona.carro.placa}
+      ''', style: style2),
+          Text('''Servicio:
+      Lavado: ${persona.carro.polish}
+      Polish: ${persona.carro.polish}
+      Tapiceria: ${persona.carro.tapiceria}\n''', style: style2),
+          const ElevationCustom(
+              widget: FirebaseMyList(),
+              text_button: "Regresar",
+              size_letter: 28)
+        ])
+      ]),
     );
   }
 }

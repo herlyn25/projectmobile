@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 
@@ -6,7 +6,8 @@ class Gradiente extends StatelessWidget {
   String title = "";
   double heightGradient = 0;
   String imagen = "";
-  Gradiente(this.title, this.heightGradient, this.imagen, {Key? key})
+  double padding_photo;
+  Gradiente(this.title, this.heightGradient, this.imagen,  this.padding_photo, {Key? key})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -23,9 +24,12 @@ class Gradiente extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            CircleAvatar(
-              backgroundImage: Image.network(imagen).image,
-              radius: 60,
+            Padding(
+              padding: EdgeInsets.only(top: padding_photo),
+              child: CircleAvatar(
+                backgroundImage: Image.network(imagen).image,
+                radius: 60,
+              ),
             ),
             Text(
               title,
