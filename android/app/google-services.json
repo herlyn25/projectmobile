@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "8856336304",
+    "firebase_url": "https://appclase-6cdc7-default-rtdb.firebaseio.com",
     "project_id": "appclase-6cdc7",
     "storage_bucket": "appclase-6cdc7.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "8856336304-8v3ftn6ifdhjt7slg83gp96pv7vnfrpr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_clase1",
+            "certificate_hash": "9c1e4caeae58e97bb7b71d389a139a84c16e8d0c"
+          }
+        },
         {
           "client_id": "8856336304-vo9ubleaihsjaik4euhn4ujgclrq13ta.apps.googleusercontent.com",
           "client_type": 3
@@ -29,6 +38,13 @@
             {
               "client_id": "8856336304-vo9ubleaihsjaik4euhn4ujgclrq13ta.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "8856336304-7279erfsehasq9u7caoq1i9b53cshrab.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterClase1"
+              }
             }
           ]
         }

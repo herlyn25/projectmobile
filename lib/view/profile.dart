@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_clase1/view/login/login.dart';
+import 'package:flutter_clase1/view/login/login_util.dart';
 import 'package:flutter_clase1/view/widgets/gradiente.dart';
 
 class Profile extends StatelessWidget {
@@ -35,6 +37,15 @@ class Profile extends StatelessWidget {
                     const Divider(),
                     Text("Email:", style: style),
                     Text("herly-1988@gmail.com", style: style),
+                    ElevatedButton(
+                        onPressed: () {
+                          LoginGoogleUtils().signOut();
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return const Login();
+                          }));
+                        },
+                        child: Text("Logout"))
                   ],
                 ),
               ),

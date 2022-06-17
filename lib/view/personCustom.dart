@@ -41,7 +41,7 @@ class PersonCustom extends StatelessWidget {
       Lavado: ${persona.carro.polish}
       Polish: ${persona.carro.polish}
       Tapiceria: ${persona.carro.tapiceria}\n''', style: style2),
-          const ElevationCustom(
+          ElevationCustom(
               widget: FirebaseMyList(),
               text_button: "Regresar",
               size_letter: 28)

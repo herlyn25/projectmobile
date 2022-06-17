@@ -5,7 +5,7 @@ import 'package:flutter_clase1/view/listtile_custom.dart';
 import 'package:flutter_clase1/view/widgets/gradient_main.dart';
 
 class FirebaseMyList extends StatefulWidget {
-  const FirebaseMyList({super.key});
+  FirebaseMyList({super.key});
 
   @override
   State<FirebaseMyList> get createState => _FirebaseMyListState();

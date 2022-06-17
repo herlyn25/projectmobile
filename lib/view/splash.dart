@@ -1,11 +1,11 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:flutter_clase1/view/widgets/menu.dart';
+import 'package:flutter_clase1/view/login/login.dart';
 import 'package:lottie/lottie.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
+  Splash({Key? key}) : super(key: key);
 
   @override
   State<Splash> get createState => HomeLotie();
@@ -16,7 +16,7 @@ class HomeLotie extends State<Splash> {
   void initState() {
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Menu()));
+          context, MaterialPageRoute(builder: (context) => const Login()));
     });
     super.initState();
   }

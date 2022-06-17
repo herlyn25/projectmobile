@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'button_float_custom.dart';
 
-void main() => runApp(const Counter());
-
 class Counter extends StatefulWidget {
-  const Counter({Key? key}) : super(key: key);
+  Counter({Key? key}) : super(key: key);
 
   @override
   State<Counter> get createState => _CounterState();
