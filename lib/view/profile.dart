@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clase1/view/login/login.dart';
 import 'package:flutter_clase1/view/login/login_util.dart';
 import 'package:flutter_clase1/view/widgets/gradiente.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Profile extends StatelessWidget {
   const Profile({
@@ -12,16 +13,19 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle style =
-        TextStyle(fontSize: 24, color: Colors.blue, fontFamily: "Pacifico");
+    TextStyle style = TextStyle(
+        fontSize: 24,
+        color: Color.fromARGB(255, 131, 132, 133),
+        fontFamily: "Pacifico");
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 236, 231, 231),
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Column(
             children: [
               Gradiente(
-                  "Herly Castillo",
+                  "Herly Castillo C",
                   300,
                   "https://firebasestorage.googleapis.com/v0/b/appclase-6cdc7.appspot.com/o/yo.png?alt=media&token=359c9b7b-0e9f-40f3-b59e-295ea94c0833",
                   80),
@@ -37,15 +41,31 @@ class Profile extends StatelessWidget {
                     const Divider(),
                     Text("Email:", style: style),
                     Text("herly-1988@gmail.com", style: style),
-                    ElevatedButton(
-                        onPressed: () {
-                          LoginGoogleUtils().signOut();
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (context) {
-                            return const Login();
-                          }));
-                        },
-                        child: Text("Logout"))
+                    const Divider(),
+                    Text("Celular:", style: style),
+                    Text("3015098556", style: style),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        LoginGoogleUtils().signOut();
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (context) {
+                          return const Login();
+                        }));
+                      },
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 82, 81, 81),
+                      )),
+                      label: Text("Logout",
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                              fontFamily: "Pacifico")),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.signOutAlt,
+                        color: Colors.white,
+                      ),
+                    )
                   ],
                 ),
               ),
