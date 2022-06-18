@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_clase1/models/persona2.dart';
-import 'package:flutter_clase1/view/listtile_custom.dart';
+import 'package:flutter_clase1/view/otroswidgets/listtile_custom.dart';
 
 import '../../models/games.dart';
 

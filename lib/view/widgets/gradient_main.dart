@@ -13,8 +13,8 @@ class GradienteMain extends StatelessWidget {
           decoration: const BoxDecoration(
               gradient: LinearGradient(
                   colors: [
-                    Color.fromARGB(255, 69, 69, 70),
-                    Color.fromARGB(255, 116, 105, 231)
+                    Color.fromARGB(255, 245, 245, 248),
+                    Color.fromARGB(255, 112, 112, 114)
                   ],
                   begin: FractionalOffset(0.2, 0.0),
                   end: FractionalOffset(1.0, 0.6),

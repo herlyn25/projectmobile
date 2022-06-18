@@ -5,7 +5,7 @@ import 'package:flutter_clase1/view/login/login.dart';
 import 'package:lottie/lottie.dart';
 
 class Splash extends StatefulWidget {
-  Splash({Key? key}) : super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   @override
   State<Splash> get createState => HomeLotie();

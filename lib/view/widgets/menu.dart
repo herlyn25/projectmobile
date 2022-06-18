@@ -14,7 +14,7 @@ class _MenuState extends State<Menu> {
   int _selectedIndex = 0;
   static List<Widget> get _widgetOptions => [
         const Home(),
-        FirebaseMyList(),
+        const FirebaseMyList(),
         const Profile()
       ];
   void _onItemTapped(int index) {

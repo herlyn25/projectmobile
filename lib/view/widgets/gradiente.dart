@@ -7,7 +7,8 @@ class Gradiente extends StatelessWidget {
   double heightGradient = 0;
   String imagen = "";
   double padding_photo;
-  Gradiente(this.title, this.heightGradient, this.imagen,  this.padding_photo, {Key? key})
+  Gradiente(this.title, this.heightGradient, this.imagen, this.padding_photo,
+      {Key? key})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -28,17 +29,19 @@ class Gradiente extends StatelessWidget {
               padding: EdgeInsets.only(top: padding_photo),
               child: CircleAvatar(
                 backgroundImage: Image.network(imagen).image,
-                radius: 60,
+                radius: 70,
               ),
             ),
-            Text(
-              title,
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 28,
-                  fontFamily: "Pacifico",
-                  fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Text(
+                title,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),

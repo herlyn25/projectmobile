@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 class Counter_Screen extends StatefulWidget {
-  Counter_Screen({Key? key}) : super(key: key);
+  const Counter_Screen({Key? key}) : super(key: key);
 
   @override
   State<Counter_Screen> get createState => _Counter_ScreenState();

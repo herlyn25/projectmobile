@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:flutter_clase1/view/login/login.dart';
@@ -25,10 +25,10 @@ class Profile extends StatelessWidget {
           Column(
             children: [
               Gradiente(
-                  "Herly Castillo C",
+                  "Herly Castillo C\n Profesional en Formación",
                   300,
                   "https://firebasestorage.googleapis.com/v0/b/appclase-6cdc7.appspot.com/o/yo.png?alt=media&token=359c9b7b-0e9f-40f3-b59e-295ea94c0833",
-                  80),
+                  50),
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Column(
