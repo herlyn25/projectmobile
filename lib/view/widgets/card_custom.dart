@@ -52,8 +52,11 @@ class CardCustom extends StatelessWidget {
               ),
               const VerticalDivider(),
               IconButton(
-                icon: const Icon(Icons.arrow_back,
-                    textDirection: TextDirection.rtl),
+                icon: const Icon(
+                  Icons.arrow_back,
+                  textDirection: TextDirection.rtl,
+                  color: Colors.white,
+                ),
                 onPressed: () {
                   Navigator.push(
                       context,
