@@ -8,6 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+          
           resizeToAvoidBottomInset: false,
           appBar: AppBar(
             backgroundColor: const Color.fromARGB(255, 82, 81, 81),

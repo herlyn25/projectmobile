@@ -14,7 +14,7 @@ class Login extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 82, 81, 81),
         title: const Text('Login',
-            style: TextStyle(fontSize: 32, fontFamily: "Pacifico")),
+            style: TextStyle(fontSize: 32)),
       ),
       body: Center(
         child: Stack(
