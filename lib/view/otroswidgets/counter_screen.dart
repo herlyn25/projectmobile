@@ -6,7 +6,7 @@ class Counter_Screen extends StatefulWidget {
   const Counter_Screen({Key? key}) : super(key: key);
 
   @override
-  State<Counter_Screen> get createState => _Counter_ScreenState();
+  State<Counter_Screen> createState() => _Counter_ScreenState();
 }
 
 class _Counter_ScreenState extends State<Counter_Screen> {

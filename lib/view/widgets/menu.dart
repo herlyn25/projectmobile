@@ -7,7 +7,7 @@ class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
 
   @override
-  State<Menu> get createState => _MenuState();
+  State<Menu> createState() => _MenuState();
 }
 
 class _MenuState extends State<Menu> {

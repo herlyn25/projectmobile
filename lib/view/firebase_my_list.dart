@@ -8,7 +8,7 @@ class FirebaseMyList extends StatefulWidget {
   const FirebaseMyList({super.key});
 
   @override
-  State<FirebaseMyList> get createState => _FirebaseMyListState();
+  State<FirebaseMyList> createState() => _FirebaseMyListState();
 }
 
 class _FirebaseMyListState extends State<FirebaseMyList> {
