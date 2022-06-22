@@ -14,7 +14,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     const bubblesOptions = BubbleOptions(bubbleCount: 70);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+          
           resizeToAvoidBottomInset: false,
           appBar: AppBar(
             backgroundColor: const Color.fromARGB(255, 82, 81, 81),

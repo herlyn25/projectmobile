@@ -13,8 +13,7 @@ class LoginGoogleUtils {
 // Google Methods
 // Sign in with google
 
-  Future<User?> signInWithGoogle() async {
-    log("${TAG}signInWithGoogle()");
+  Future<User?> signInWithGoogle() async {    
     final GoogleSignInAccount? googleSignInAccount =
         await googleSignIn.signIn();
     log("${TAG}googleUser email -->${googleSignInAccount!.email}");
@@ -42,11 +41,8 @@ class LoginGoogleUtils {
     if (user != null) {
       assert(!user.isAnonymous);
       assert(await user.getIdToken() != null);
-
       final User? currentUser = _auth.currentUser;
-      assert(user.uid == currentUser?.uid);
-
-      log("Todo ha ido bien");
+      assert(user.uid == currentUser?.uid);      
       return user;
     }
     return null;

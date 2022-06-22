@@ -29,4 +29,20 @@ class FirebaseConnection {
     }
     return persons;
   }
+/*   Future<Persona2?> getRegister(int id) async {
+     Persona2? person;
+    try {
+      DatabaseReference _registros = instanceFirebase();
+      DataSnapshot response = await _registros.ref("${id}").get();
+      String myJson = json.encode(response.value);
+      Map<String, dynamic> myJsonDecode = json.decode(myJson);
+      
+       person = Persona2.fromJson(myJsonDecode);
+                
+      return person;
+    } catch (e) {
+      //rethrow;
+      print(e);
+    }    
+  } */
 }
